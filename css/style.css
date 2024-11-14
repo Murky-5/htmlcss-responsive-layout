@@ -1,0 +1,291 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*----------------
+    COMMONS
+------------------*/
+img {
+    display: block;
+    width: 100%;
+}
+
+/*----------------
+    LAYOUT
+------------------*/
+
+.flexbox {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+}
+
+body {
+    background-color: #F6F5F3;
+}
+
+main {
+    padding: 15px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gap > {
+    gap: 10px;
+}
+
+.margin {
+    margin-top: 20px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/*----------------
+    TYPOGRAPHY
+------------------*/
+body * {
+    font-family: Montserrat, 'Helvetica Neue', sans-serif;
+}
+
+#title {
+    font-family: 'Nerko One', cursive;
+    color: gold;
+}
+
+.col_left {
+    width: 100%;
+    flex-direction: column;
+}
+
+.col_right {
+    background-color: #FFF;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+
+.col_right * {
+    display: flex;
+    flex-direction: column;
+}
+
+.col_right > h3 {
+    padding-bottom: 20px;
+}
+
+.col_right > ul > li:not(:last-child) {
+    padding-bottom: 10px;
+}
+
+#category {
+    color: gray;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+#category + h2 {
+    color: #7C69A4;
+    display: inline-block;
+    padding-right: 3px;
+}
+
+.show {
+    display: none;
+}
+
+/*----------------
+    BUTTONS
+------------------*/
+
+.socials > ul *:not(span){
+    display: flex;
+}
+
+.socials > ul {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.socials > ul > li:not(:first-child, :last-child) {
+    padding: 0 7px;
+}
+
+.socials > ul > li {
+    flex-grow: 1;
+}
+
+.socials > ul > li > button {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+span {
+    display: none;
+    padding-left: 2px;
+}
+
+/*----------------
+    HEADER
+------------------*/
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.background_header {
+    margin: 0 auto;
+}
+
+.recepy-of {
+    margin: 0 auto;
+}
+
+
+
+/*----------------
+    MAIN
+------------------*/
+
+#banner {
+    width: 100%;
+}
+
+.history {
+    text-align: left;
+}
+
+.history > h1 {
+    margin-bottom: 10px;
+}
+
+hr {
+    max-width: 60px;
+    border: 1px solid gold;
+}
+
+.presentation > p {
+    line-height: 30px;
+}
+
+.presentation > .img {
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+/*----------------
+    FOOTER
+------------------*/
+
+#footer {
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    padding: 20px 0;
+    background-color: #7C69A4;
+}
+
+#footer > .flexbox {
+    max-width: 350px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#footer > .flexbox > * {
+    display: flex;
+}
+
+#footer * {
+    justify-content: center;
+    color: #FFF;
+    background-color: #7C69A4;
+}
+
+#footer > .flexbox > .col_right * {
+    gap: 10px;
+    flex-flow: row wrap;
+}
+
+/*----------------
+    RESPONSIVE
+    Mobile First
+------------------*/
+/* SM >= 576px */
+@media screen and (min-width: 576px) {
+    
+}
+/* MD >= 768px */
+@media screen and (min-width: 768px) {
+    .header {
+        text-align: left;
+    }
+    .show {
+        display: inline-block;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .recap.col_right * {
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .recepy-of > .row > .recap > ul {
+        width: 100%;
+    }
+    .presentation > .img {
+        padding-top: 8px;
+        margin-right: 20px;
+        float: left;
+    }
+    .presentation > .img > img {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* LG >= 992px */
+@media screen and (min-width: 992px) {
+    
+}
+/* XL >= 1200px */
+@media screen and (min-width: 1200px) {
+    
+}
+
+
+/* COLORS */
+
+header.background_header {
+    background-color: #FFF;
+}
