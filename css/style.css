@@ -82,7 +82,7 @@ body * {
 .col_right {
     background-color: #FFF;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     align-items: center;
 }
 
@@ -105,7 +105,7 @@ body * {
     font-weight: 300;
 }
 
-#category + h2 {
+#category ~ h2 {
     color: #7C69A4;
     display: inline-block;
     padding-right: 3px;
@@ -210,7 +210,7 @@ hr {
     justify-content: center;
     text-align: center;
     font-size: small;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     background-color: #7C69A4;
 }
 
@@ -240,6 +240,25 @@ hr {
     RESPONSIVE
     Mobile First
 ------------------*/
+/* 
+SM >= 330px 
+@media screen and (max-width: 330px) {
+    .socials > ul > li {
+        flex-wrap: wrap;
+    }
+    .socials > ul {
+        flex-direction: column;                 OPTIONAL FOR IPHONE XXXS
+        gap: 20px;
+    }
+    span {
+        display: inline-block;
+    }
+    h1, section * {
+        font-size: 60%;
+    }
+}
+
+*/
 /* SM >= 576px */
 @media screen and (min-width: 576px) {
     
@@ -273,10 +292,46 @@ hr {
         width: 100%;
         height: 100%;
     }
+    span {
+        display: inline-block;
+    }
+    #footer > .flexbox > .col_right * {
+        flex-wrap: nowrap;
+    }
 }
 /* LG >= 992px */
 @media screen and (min-width: 992px) {
-    
+    .recepy-of h2 {
+        font-size: 2rem;
+    }
+    main {
+        max-width: 1200px;
+    }
+    .row {
+        flex-direction: row;
+    }
+    .youtube {
+        max-width: 70%;
+    }
+    .recap {
+        max-width: 30%;
+    }
+    .recap.col_right * {
+        width: 100%;
+    }
+    #footer > .flexbox {
+        max-width: 100%;
+        flex-grow: 1;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #footer > .flexbox > .col_left > * {
+        text-align: initial;
+        padding-left: 30px;
+    }
+    #footer > .flexbox > .col_right {
+        justify-content: flex-end;
+    }
 }
 /* XL >= 1200px */
 @media screen and (min-width: 1200px) {
